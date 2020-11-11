@@ -1,0 +1,39 @@
+.dialog-item {
+  width: 348px;
+  height: 83px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+
+  &__avatar {
+    margin: 10px 13px;
+  }
+
+  &__info {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-right: 14px;
+      b {
+        color: #ffffff;
+      }
+      span {
+        color: #6c7883;
+      }
+    }
+    &-bottom {
+      margin-bottom: 17px;
+      color: #6c7883;
+    }
+  }
+}
