@@ -1,0 +1,31 @@
+.header-dialogs {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  &__btn-info {
+    border-bottom: 2px solid #6c7883;
+    border-top: 2px solid #6c7883;
+    height: 2px;
+    width: 24px;
+    padding: 4px 0;
+    margin-left: 23px;
+    cursor: pointer;
+    div {
+      background-color: #6c7883;
+      height: 2px;
+      width: 24px;
+    }
+  }
+  &__search {
+    width: 222px;
+    height: 40px;
+    background-color: #242f3d;
+    color: #6c7883;
+    border-radius: 4px;
+    margin-left: 29px;
+    outline: none;
+    border: none;
+    padding-left: 33px;
+    box-sizing: border-box;
+  }
+}

@@ -1,5 +1,5 @@
 .dialog-item {
-  width: 348px;
+  width: 375px;
   height: 83px;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -8,12 +8,12 @@
   align-items: center;
 
   &__avatar {
-    margin: 10px 13px;
+    margin: 10px 0 10px 13px;
   }
 
   &__info {
-    margin-left: 20px;
-    width: 100%;
+    margin-left: 33px;
+    width: 266px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,6 +34,12 @@
     &-bottom {
       margin-bottom: 17px;
       color: #6c7883;
+      p {
+        white-space: nowrap; /* Запрещаем перенос строк */
+        overflow: hidden; /* Обрезаем все, что не помещается в область */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+        padding-right: 10px;
+      }
     }
   }
 }

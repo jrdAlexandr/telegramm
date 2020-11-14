@@ -1,5 +1,18 @@
 .App {
   background: #17212B;
+  height: 100vh;
 }
 
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 4px; /* ширина для вертикального скролла */
 
+  background-color: #6C7883;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color:  #101921;;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}

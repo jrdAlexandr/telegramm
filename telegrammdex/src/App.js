@@ -1,8 +1,8 @@
 import './App.scss';
-import DialogItem from './components/DialogItem'
+import Dialogs from './components/Dialogs';
 function App() {
   return <div className='App'> 
-  <DialogItem />
+  <Dialogs />
    </div>;
 }
 
