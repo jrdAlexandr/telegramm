@@ -13,7 +13,7 @@ const DialogItem = () => {
           <b>Leonid</b> <span>19:26</span>
         </div>
         <div className='dialog-item__info-bottom'>
-          <p>Придешь сегодня на игру?</p>{' '}
+          <p>Придешь сегодня на игру? Дальше текст для проверки стилей </p>{' '}
         </div>
       </div>
     </div>

@@ -4,5 +4,10 @@
   background-position: left bottom; /* Положение фона */
   background-repeat: no-repeat; /* Повторяем фон по горизонтали */
   overflow: auto;
- 
+  &__message{
+    width: 200px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid black;
+  }
 }

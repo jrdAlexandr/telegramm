@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ChatInput.scss';
 import iconAddFile from '../../assets/images/icon-add-file.svg';
 import iconSendMessage from '../../assets/images/icon-send-message.svg';
 const ChatInput = () => {
   const [rowsText, setRowsText] = useState(1);
-
   const handlerInputMessage = (e) => {
-    if ((e.target.scrollHeight - 4) / 21 <= 6) {
+    console.log(getComputedStyle(e.target).height);
+    if ((e.target.scrollHeight - 4) / 21 < 7) {
       setRowsText((e.target.scrollHeight - 4) / 21);
     }
   };
