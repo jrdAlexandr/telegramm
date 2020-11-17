@@ -1,9 +1,12 @@
-.dialogs{
+.dialogs {
   width: 380px;
   border: 1px solid #101921;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
+.dialogs:hover {
+  overflow-y: auto;
+}

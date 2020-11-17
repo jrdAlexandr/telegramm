@@ -8,7 +8,15 @@ const Dialogs = () => {
       <HeaderDialogs />
       <DialogItem />
       <DialogItem />
-
+      <DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem /><DialogItem />
+      <DialogItem />
     </div>
   );
 };

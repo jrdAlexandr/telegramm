@@ -1,0 +1,32 @@
+.chat-input {
+  max-height: 200px;
+  min-height: 60px;
+  width: calc(100vw - 375px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__input {
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #6c7883;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    border: transparent;
+    height: max-content;
+    flex: 1 0 auto;
+    margin: 18px 40px ;
+    resize: none;
+    
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__icon {
+   flex: 0 0 auto;
+   margin: 18px 15px 18px 15px ;
+  }
+}
