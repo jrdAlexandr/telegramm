@@ -1,0 +1,8 @@
+.chat-body{
+  flex: 1 1 auto;
+  background-image: url('../../assets/images/bgc-body-chat.png');
+  background-position: left bottom; /* Положение фона */
+  background-repeat: no-repeat; /* Повторяем фон по горизонтали */
+  overflow: auto;
+ 
+}
