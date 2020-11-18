@@ -1,0 +1,12 @@
+.empty-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  p {
+    color: white;
+    background-color: #242f3d;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}

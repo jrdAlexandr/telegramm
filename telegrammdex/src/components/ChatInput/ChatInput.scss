@@ -15,15 +15,16 @@
     line-height: 21px;
     border: transparent;
     flex: 1 0 auto;
-    margin: 18px 40px ;
+    margin: 18px 40px;
     resize: none;
-    
   }
   &__input:focus {
     outline: none;
   }
   &__icon {
-   flex: 0 0 auto;
-   margin: 18px 15px 18px 15px ;
+    flex: 0 0 auto;
+    margin: 18px 15px 18px 15px;
+    width: 24px;
+    height: 24px;
   }
 }
