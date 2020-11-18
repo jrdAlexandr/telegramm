@@ -10,6 +10,9 @@ const ChatInput = () => {
       setRowsText((e.target.scrollHeight - 4) / 21);
     }
   };
+  const handlerSendMessage = () => {
+    setRowsText(1);
+  };
 
   return (
     <div className='chat-input'>
@@ -24,6 +27,7 @@ const ChatInput = () => {
         className='chat-input__icon'
         src={iconSendMessage}
         alt='icon send message'
+        onClick={handlerSendMessage}
       />
     </div>
   );
