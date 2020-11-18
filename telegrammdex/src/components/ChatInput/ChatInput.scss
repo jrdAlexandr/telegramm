@@ -2,10 +2,15 @@
   max-height: 156px;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
+  width: 100%;
+  position: relative;
 
   &__input {
+    max-height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: transparent;
     color: #6c7883;
     font-family: Roboto;
@@ -17,14 +22,24 @@
     flex: 1 0 auto;
     margin: 18px 40px;
     resize: none;
+    display: inline-block;
+    max-width: 70%;
+    word-break: break-all; /* optional */
   }
   &__input:focus {
     outline: none;
   }
   &__icon {
-    flex: 0 0 auto;
+
+    position: absolute;
     margin: 18px 15px 18px 15px;
     width: 24px;
     height: 24px;
+  }
+  &__icon:first-child{
+    left: 0;
+  }
+  &__icon:last-child{
+    right: 0;
   }
 }
