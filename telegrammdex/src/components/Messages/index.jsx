@@ -4,7 +4,9 @@ import ChatHeader from '../ChatHeader';
 import ChatBody from '../ChatBody';
 import './Messages.scss';
 
-const Messages = () => {
+const Messages = ({dialogTitle}) => {
+ 
+
   return (
     <div className='messages'>
       <ChatHeader />
