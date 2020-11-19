@@ -2,7 +2,14 @@ import React from 'react';
 import Avatar from '../Avatar';
 import './DialogItem.scss';
 
-const DialogItem = () => {
+const DialogItem = ({dialogInfo}) => {
+
+//   id: 435
+// message_content: "Новая парадигма реальности: склады ломятся от зерна"
+// message_date: 1603269272
+// message_read: true
+// message_you: true
+// title: "Потерянная принцесса"
   return (
     <div className='dialog-item'>
       <div className='dialog-item__avatar'>
@@ -10,10 +17,10 @@ const DialogItem = () => {
       </div>
       <div className='dialog-item__info'>
         <div className='dialog-item__info-top'>
-          <b>Leonid</b> <span>19:26</span>
+  <b>{dialogInfo.title}</b> <span>{(new Date((dialogInfo.message_date)).toLocaleDateString(navigator.language, {hour: '2-digit', minute:'2-digit'})).slice(12)}</span>
         </div>
         <div className='dialog-item__info-bottom'>
-          <p>Придешь сегодня на игру? Дальше текст для проверки стилей </p>{' '}
+  <p>{dialogInfo.message_content}</p>{' '}
         </div>
       </div>
     </div>

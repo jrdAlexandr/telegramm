@@ -5,6 +5,7 @@
   font-size: 16px;
   line-height: 21px;
   align-items: center;
+  cursor: pointer;
 
   &__avatar {
     margin: 10px 0 10px 13px;
@@ -25,6 +26,9 @@
       margin-right: 14px;
       b {
         color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       span {
         color: #6c7883;
@@ -41,4 +45,7 @@
       }
     }
   }
+}
+.dialog-item:hover{
+  background-color: #222b33;
 }

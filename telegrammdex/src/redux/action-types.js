@@ -1,0 +1,3 @@
+const GET_ALL_DIALOGS = 'GET_ALL_DIALOGS';
+
+export { GET_ALL_DIALOGS };
