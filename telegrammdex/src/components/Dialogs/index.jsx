@@ -9,24 +9,23 @@ import { Link } from 'react-router-dom';
 const Dialogs = () => {
   const dispatch = useDispatch();
   const dialogs = useSelector((state) => state.dialogs.dialogs);
+
   useEffect(() => {
     dispatch(getDialogs());
   }, []);
-  console.log(dialogs);
+
   return (
     <div className='dialogs'>
       <HeaderDialogs />
-      {dialogs.map((dialog) => {
-        return (
-          <Link to={`/${dialog.id}`}>
-            <DialogItem
-              key={dialog.id}
-             
-              dialogInfo={dialog}
-            />
-          </Link>
-        );
-      })}
+      {dialogs
+        ? dialogs.map((dialog) => {
+            return (
+              <Link key={dialog.id} to={`/${dialog.id}`}>
+                <DialogItem dialogInfo={dialog} />
+              </Link>
+            );
+          })
+        : null}
     </div>
   );
 };

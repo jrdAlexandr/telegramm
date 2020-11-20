@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import './ChatHeader.scss';
 import iconChatInfo from '../../assets/images/icon-chat-info.svg';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMessages } from '../../redux/actions/messages/messages';
 const ChatHeader = ({ dialogTitle }) => {
   const [chatTitle, setChatTitle] = useState('');
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const dialogs = useSelector((state) => state.dialogs.dialogs);
   const { chat } = useParams();
+  // useEffect(() => {
+    
+  // }, []);
   useEffect(() => {
-    dialogs.map((dialog) =>
+    dialogs?.map((dialog) =>
       dialog.id == chat ? setChatTitle(dialog.title) : null
     );
+    dispatch(getMessages(chat));
   }, [chat]);
 
   return (

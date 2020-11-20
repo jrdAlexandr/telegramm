@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import './ChatInput.scss';
 import iconAddFile from '../../assets/images/icon-add-file.svg';
 import iconSendMessage from '../../assets/images/icon-send-message.svg';
+import { useDispatch } from 'react-redux';
+import { ADD_MESSAGE } from '../../redux/actions/messages/messages';
+
 const ChatInput = () => {
 const [inputMessage, setInputMessage] = useState('Write a message...')
   const inputMessageRef = useRef()
+  const dispatch = useDispatch()
   const [rowsText, setRowsText] = useState(1);
   // const handlerInputMessage = (e) => {
   //   console.log(getComputedStyle(e.target).height);
@@ -14,12 +18,12 @@ const [inputMessage, setInputMessage] = useState('Write a message...')
   // };
   const handlerInputMessage = (e) => {
     console.log(e.target);
-    
+  
   };
 
 
   const handlerSendMessage = () => {
-   
+    dispatch(ADD_MESSAGE({content:'123456767'}))
     console.log( inputMessageRef.current.innerText)
 
     // setRowsText(1);

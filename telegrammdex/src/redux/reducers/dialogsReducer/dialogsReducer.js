@@ -1,6 +1,6 @@
 import * as ACTIONS_TYPES from '../../action-types';
 
-const parrotReducer = (state = {}, action) => {
+const dialogsReducer = (state = {}, action) => {
   switch (action.type) {
     case ACTIONS_TYPES.GET_ALL_DIALOGS:
       return {
@@ -13,4 +13,4 @@ const parrotReducer = (state = {}, action) => {
   }
 };
 
-export default parrotReducer;
+export default dialogsReducer;
