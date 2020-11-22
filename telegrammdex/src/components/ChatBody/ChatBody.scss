@@ -5,6 +5,7 @@
   background-repeat: no-repeat; /* Повторяем фон по горизонтали */
   overflow: auto;
   &__message {
+    position: relative;
     max-width: 440px;
     height: auto;
     background: #4082bc;
@@ -18,5 +19,11 @@
     line-height: 21px;
     color: #ffffff;
     margin-left: auto;
+    &__info{
+      position: absolute;
+      bottom: 3px;
+      right: 8px;
+      color: #6C7883;
+    }
   }
 }

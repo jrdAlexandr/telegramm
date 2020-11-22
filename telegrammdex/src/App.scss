@@ -1,22 +1,53 @@
 .App {
-  background: #17212B;
+  background: #17212b;
+}
+
+.page-1 {
   height: 100vh;
   display: flex;
 }
-a { 
+.page-2 {
+  height: 100vh;
+  display: flex;
+}
+
+a {
   text-decoration: none; /* Отменяем подчеркивание у ссылки */
- }
+}
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
   width: 4px; /* ширина для вертикального скролла */
-  background-color: #6C7883;
+  background-color: #6c7883;
 }
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-  background-color:  #101921;;
+  background-color: #101921;
   border-radius: 4px;
   box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
+@media (max-width: 750px){
+  .page-1 {
+    height: 100vh;
+    .empty-page{
+      display: none;
+    }
+    .dialogs{
+      width: 100vw;
+      .dialog-item__info{
+        width: calc(100vw - 109px);
+      }
+    }
+  }
+  .page-2 {
+    height: 100vh;
+    .dialogs{
+      display: none;
+    }
+    .chat-body__message {
+      max-width: 80%;
+    }
 
+  }
+}

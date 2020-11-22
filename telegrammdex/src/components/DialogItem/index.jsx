@@ -16,7 +16,7 @@ const DialogItem = ({ dialogInfo }) => {
       </div>
       <div className='dialog-item__info'>
         <div className='dialog-item__info-top'>
-          <b>{dialogInfo.title}</b>{' '}
+          <b>{dialogInfo.title}</b>
           <span>
             {new Date(dialogInfo.message_date)
               .toLocaleDateString(navigator.language, {
@@ -27,7 +27,7 @@ const DialogItem = ({ dialogInfo }) => {
           </span>
         </div>
         <div className='dialog-item__info-bottom'>
-          <p>{dialogInfo.message_content}</p>{' '}
+          <p>{dialogInfo.message_content}</p>
         </div>
       </div>
     </div>

@@ -6,45 +6,83 @@ import { useDispatch } from 'react-redux';
 import { ADD_MESSAGE } from '../../redux/actions/messages/messages';
 
 const ChatInput = () => {
-const [inputMessage, setInputMessage] = useState('Write a message...')
-  const inputMessageRef = useRef()
-  const dispatch = useDispatch()
-  const [rowsText, setRowsText] = useState(1);
-  // const handlerInputMessage = (e) => {
-  //   console.log(getComputedStyle(e.target).height);
-  //   if ((e.target.scrollHeight - 4) / 21 < 7) {
-  //     setRowsText((e.target.scrollHeight - 4) / 21);
-  //   }
-  // };
-  const handlerInputMessage = (e) => {
-    console.log(e.target);
-  
+  const [inputMessage, setInputMessage] = useState('Write a message...');
+  const inputMessageRef = useRef();
+  const dispatch = useDispatch();
+
+  const handlerSendMessage = (e) => {
+    e.preventDefault();
+    if (
+      inputMessageRef.current.innerText !== 'Write a message...' &&
+      inputMessageRef.current.innerText !== ''
+    ) {
+      dispatch(
+        ADD_MESSAGE({
+          date: Date.now(),
+          id: Date.now(),
+          read: false,
+          you: true,
+          content: inputMessageRef.current.innerText,
+        })
+      );
+
+      setInputMessage('Write a message...');
+      return false;
+    }
   };
-
-
-  const handlerSendMessage = () => {
-    dispatch(ADD_MESSAGE({content:'123456767'}))
-    console.log( inputMessageRef.current.innerText)
-
-    // setRowsText(1);
+  const sendMessage = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (
+        inputMessageRef.current.innerText !== 'Write a message...' &&
+        inputMessageRef.current.innerText !== ''
+      ) {
+        dispatch(
+          ADD_MESSAGE({
+            date: Date.now(),
+            id: Date.now(),
+            read: false,
+            you: true,
+            content: inputMessageRef.current.innerText,
+          })
+        );
+        setInputMessage('');
+        inputMessageRef.current.innerText = '';
+      }
+    }
   };
 
   return (
     <div className='chat-input'>
       <img className='chat-input__icon' src={iconAddFile} alt='icon add file' />
-      {/* <textarea
-        onChange={handlerInputMessage}
-       c
-        placeholder='Write a message...'
-        rows={rowsText}
-      ></textarea> */}
-      <span  className='chat-input__input' ref={inputMessageRef} onClick={()=>{setInputMessage('')}}  role="textbox" contenteditable="true">{inputMessage}</span>
-      <img
-        className='chat-input__icon'
-        src={iconSendMessage}
-        alt='icon send message'
-        onClick={handlerSendMessage}
-      />
+
+      <span
+        onFocus={() => {
+          setInputMessage('');
+        }}
+        onBlur={() => {
+          if (inputMessageRef.current.innerText === '') {
+            setInputMessage('Write a message...');
+          }
+        }}
+        onKeyDown={sendMessage}
+        className='chat-input__input'
+        ref={inputMessageRef}
+        onClick={() => {
+          setInputMessage('');
+        }}
+        role='textbox'
+        contenteditable='true'
+      >
+        {inputMessage}
+      </span>
+      <button className='chat-input__icon' type='button'>
+        <img
+          src={iconSendMessage}
+          alt='icon send message'
+          onClick={handlerSendMessage}
+        />
+      </button>
     </div>
   );
 };
