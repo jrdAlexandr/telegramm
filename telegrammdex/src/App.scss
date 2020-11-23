@@ -27,27 +27,29 @@ a {
   box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
-@media (max-width: 750px){
+@media (max-width: 750px) {
   .page-1 {
     height: 100vh;
-    .empty-page{
+    .empty-page {
       display: none;
     }
-    .dialogs{
+    .dialogs {
       width: 100vw;
-      .dialog-item__info{
+      .dialog-item__info {
         width: calc(100vw - 109px);
       }
     }
   }
   .page-2 {
     height: 100vh;
-    .dialogs{
+    .dialogs {
       display: none;
     }
     .chat-body__message {
       max-width: 80%;
     }
-
+    .chat-header__interlocutor__link {
+      display: inline-block;
+    }
   }
 }

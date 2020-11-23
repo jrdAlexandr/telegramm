@@ -6,17 +6,31 @@
   align-items: center;
 
   &__interlocutor {
+    display: flex;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
-    margin: 10px 0 8px 23px;
-    &__name {
-      color: #ffffff;
+
+    &__link {
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin: 18px 14px;
+      display: none;
+      cursor: pointer;
     }
-    &__time {
-      color: #6c7883;
+    &__info {
+      margin: 10px 0 8px 23px;
+      &__name {
+        color: #ffffff;
+      }
+      &__time {
+        color: #6c7883;
+      }
     }
   }
   &__btn-info {
